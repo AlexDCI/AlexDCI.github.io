@@ -48,7 +48,7 @@
 
         </p>
     </div>
-    <img src="./foto.html.jpg" alt="my.img">
+    <img id="none" src="./foto.html.jpg" alt="my.img">
     <form action="">
         <label for="">Enter First Name</label>
         <input type="text"requires>
@@ -67,17 +67,40 @@
         <br>
         <br>
         <input type="checkbox">
-        <label for="are you at DCI"></label>
+        <label for="">Are you at DCI</label>
         <br>
         <br>
         <button type="submit">Submit</button>
+        <br>
+        <br>
+        <label for="">Do you want to join DCI?</label>
+        <div id="yes">
+            <p>yes</p>
+            <input type="checkbox" id="checkbox">
+        </div>
+        <div id="no">
+            <p>no</p>
+            <input type="checkbox">
+        </div>
     </form>
     <footer>
        <ul>
         <li>gluhomanmail@gmail.com</li>
         <li>Tel.0675386099</li>
         <li>fex.538538832</li>
-       </ul> 
+       </ul>
+       <script>
+        var checkbox = document.getElementById("checkbox");
+        var image = document.getElementById("none");
+
+        checkbox.addEventListener("change", function(){
+            if (checkbox.checked){
+                image.src = "qvuxyc.svg"
+            }else{
+                image.src = "s16obq.svg"  
+            }
+        });
+       </script> 
     </footer>
 </body>
 
