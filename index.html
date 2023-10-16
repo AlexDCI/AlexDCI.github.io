@@ -82,6 +82,9 @@
             <p>no</p>
             <input type="checkbox">
         </div>
+        <div>
+        <button onclick="myFunction();" type="button">go to page 2</button>
+        </div>
     </form>
     <footer>
        <ul>
@@ -91,15 +94,34 @@
        </ul>
        <script>
         var checkbox = document.getElementById("checkbox");
-        var image = document.getElementById("none");
+        var window = document.getElementById("none");
 
         checkbox.addEventListener("change", function(){
             if (checkbox.checked){
-                image.src = "qvuxyc.svg"
+                window.location.href = "https://digitalcareerinstitute.org/de/"
             }else{
-                image.src = "s16obq.svg"  
+                window.location.href = "https://www.google.de/"  
             }
         });
+function myFunction(){
+    window.location.href='second.html';
+}
+    function changeColor() {
+  var colors = ["aqua", "green", "Yellow"]; // Array mit den Farben, die du verwenden möchtest
+  var count = 0; // Zähler für die Anzahl der Farbänderungen
+
+  var interval = setInterval(function() {
+    document.body.style.backgroundColor = colors[count]; // Hintergrundfarbe ändern
+
+    count++; // Zähler erhöhen
+    
+    if (count === colors.length) {
+      clearInterval(interval); // Wenn alle Farben geändert wurden, den Intervall beenden
+    }
+  }, 3000); // Intervall alle drei Sekunden (3000 Millisekunden)
+}
+
+changeColor(); // Funktion aufrufen, um die Farben zu ändern
        </script> 
     </footer>
 </body>
